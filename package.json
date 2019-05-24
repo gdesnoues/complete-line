@@ -1,7 +1,7 @@
 {
     "name": "complete-line",
     "displayName": "Complete Line",
-    "description": "auto complete a line with a repeated character",
+    "description": "auto complete line with a repeated character",
     "version": "0.2.0",
     "publisher": "gdesnoues",
     "icon": "images/completeLine.png",

@@ -6,4 +6,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Initial release
+- none
+
+## [0.2.0] - 2019-05-24
+### Added
+- first maketplace publish
+
+## [0.0.1] - 2019-05-24
+### Added
+- all files for initial release
