@@ -1,10 +1,11 @@
-# wlang README
+# Complete Line
 
 [![License](https://badgen.net/badge/license/MIT/blue)](https://opensource.org/licenses/mit-license.php)
 [![Version](https://badgen.net/vs-marketplace/v/gdesnoues.complete-line)](https://marketplace.visualstudio.com/items?itemName=gdesnoues.complete-line)
 [![installs](https://badgen.net/vs-marketplace/i/gdesnoues.complete-line)](https://marketplace.visualstudio.com/items?itemName=gdesnoues.complete-line)
 
 This is a Keymaps extension for [VS Code](https://code.visualstudio.com/)
+
 It's use to automatically complete a comment line with a definite character or with your selection
 
 ## Configuration
