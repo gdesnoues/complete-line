@@ -16,7 +16,7 @@ Go to `File > Preferences > Settings > Extensions > Complete Line`
 
 ## Command key
 
-Use `Ctrl+Shift+/` to complete the end of your active line with the character define in the configuration
+Use `Ctrl+Shift+:` to complete the end of your active line with the character define in the configuration
 
 if you want to repete a desired string, select it before use the command key
 
