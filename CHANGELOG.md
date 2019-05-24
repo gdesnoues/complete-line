@@ -8,6 +8,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - none
 
+## [1.0.0] - 2019-05-24
+### Changed
+- first production maketplace publish
+- change changelog title
+
 ## [0.2.0] - 2019-05-24
 ### Added
 - first maketplace publish
