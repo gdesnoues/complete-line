@@ -1,0 +1,46 @@
+{
+    "name": "complete-line",
+    "displayName": "Complete Line",
+    "description": "auto complete a line with a repeated character",
+    "version": "0.1.0",
+    "publisher": "gdesnoues",
+    "icon": "images/completeLine.png",
+    "engines": {
+        "vscode": "^1.34.0"
+    },
+    "categories": [
+        "Keymaps"
+    ],
+    "keywords": [
+        "complete",
+        "repete",
+        "line",
+        "comment"
+    ],
+    "activationEvents": ["onCommand:completeline.complete"],
+    "main": "./extension.js",
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "Complete Line",
+            "properties": {
+                "completeline.desiredCharacter": {
+                    "type": "string",
+                    "default": "=",
+                    "description": "the repeted character"
+                },
+                "completeline.desiredLength": {
+                    "type": "number",
+                    "default": 80,
+                    "description": "we repete it until the line length hits this count."
+                }
+            }
+        },
+        "keybindings": [
+            {
+                "key": "ctrl+shift+/",
+                "command": "completeline.complete"
+            }
+        ]
+    }
+}
