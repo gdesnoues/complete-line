@@ -2,7 +2,7 @@
     "name": "complete-line",
     "displayName": "Complete Line",
     "description": "auto complete a line with a repeated character",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "gdesnoues",
     "icon": "images/completeLine.png",
     "engines": {
@@ -21,7 +21,9 @@
         "type": "git",
         "url": "https://github.com/gdesnoues/complete-line.git"
     },
-    "activationEvents": ["onCommand:completeline.complete"],
+    "activationEvents": [
+        "onCommand:completeline.complete"
+    ],
     "main": "./extension.js",
     "contributes": {
         "configuration": {
