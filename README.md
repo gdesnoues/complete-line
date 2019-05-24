@@ -25,7 +25,7 @@ if you want to repete a desired string, select it before use the command key
 
 ## Release Notes
 
-see [CHANGELOG.md](https://github.com/gdesnoues/wlang/blob/master/CHANGELOG.md) for release notes
+see [CHANGELOG.md](https://github.com/gdesnoues/complete-line/blob/master/CHANGELOG.md) for release notes
 
 ## Tips
 

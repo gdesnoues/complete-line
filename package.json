@@ -17,6 +17,10 @@
         "line",
         "comment"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gdesnoues/complete-line.git"
+    },
     "activationEvents": ["onCommand:completeline.complete"],
     "main": "./extension.js",
     "contributes": {
