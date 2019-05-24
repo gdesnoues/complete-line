@@ -2,7 +2,7 @@
     "name": "complete-line",
     "displayName": "Complete Line",
     "description": "auto complete line with a repeated character",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "publisher": "gdesnoues",
     "icon": "images/completeLine.png",
     "engines": {
