@@ -8,6 +8,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - none
 
+## [1.1.0] - 2019-05-24
+### Changed
+- #2 Use editor.rulers to get all column rulers in addition to the Complete Line param
+
+### Fixed
+- #4 spell checking
+
 ## [1.0.0] - 2019-05-24
 ### Changed
 - first production maketplace publish

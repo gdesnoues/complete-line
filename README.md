@@ -40,6 +40,14 @@ You can see a vertical line (ruler) at the final length with adding this code in
         "editorRuler.foreground": "#333333"
     },
 ```
-the first line is all the rulers positions (2 in mine)
+- The first line is all the rulers positions (2 in mine)
+- The third line is the ruler color
 
-the third line is the ruler color
+They will be added to an array with `Settings > Extensions > Complete Line`. So you may have several steps to complete the line
+
+## Contributors
+
+Thanks to :
+
+- [Pascal Polleunus](https://github.com/ppo)
+- [wimille](https://github.com/wimille)
