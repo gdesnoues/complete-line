@@ -8,7 +8,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - none
 
-## [1.2.0] - 2019-05-24
+## [1.3.0] - 2020-05-16
+### Changed
+- #3 Add possibility to repeat the last character of the line (by leave the variable empty)
+
+## [1.2.0] - 2020-05-16
 ### Changed
 - #2 Use editor.rulers to get all column rulers in addition to the Complete Line param
 

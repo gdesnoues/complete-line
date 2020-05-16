@@ -66,9 +66,17 @@ exports.activate = (context) => {
             let sel = vscode.workspace.getConfiguration('completeline').desiredCharacter;
             let selStart = selection.start.character;
             let selEnd = selection.end.character;
-            if (selStart !== selEnd) {
-                sel = text.substring(selStart, selEnd); //repeat the selected string instead of the desiredCharacter
+
+            // replace with the last character of the line if completeline is empty
+            if (sel === "") {
+                sel = text[text.length - 1]
             }
+
+            // repeat the selected string instead of the desiredCharacter
+            if (selStart !== selEnd) {
+                sel = text.substring(selStart, selEnd);
+            }
+            
             let str = sel.repeat(len).substring(0, len);
 
             // ===== add the repeted string add the end of the line ============
