@@ -11,24 +11,21 @@ It's use to automatically complete a comment line with a definite character or w
 ## Configuration
 
 Go to `File > Preferences > Settings > Extensions > Complete Line`
-- choose your default repeated character
-- choose the final line length
+- choose your default repeated character (leave the variable empty to repeat the last character of the line)
+- choose the final line length (to have several steps, use the `editor.rulers` also)
 
 ## Command key
 
 Use `Ctrl+Shift+:` to complete the end of your active line with the character define in the configuration
 
-if you want to repeat a desired string, select it before use the command key
-
-## Known Issues
-
-- None
+- if you want to repeat a desired string : select it before use the command key
+- if you want to repeat the last character of the line : leave `Complete Line` empty
 
 ## Release Notes
 
 see [CHANGELOG.md](https://github.com/gdesnoues/complete-line/blob/master/CHANGELOG.md) for release notes
 
-## Tips
+## :bulb: Tips
 
 You can see a vertical line (ruler) at the final length with adding this code in your settings.json
 - go to `File > Preferences > Settings > Text Editor > Files`
