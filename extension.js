@@ -29,11 +29,31 @@ exports.activate = (context) => {
             }
 
             // ===== determine nb chars ========================================
+            let rulerList = vscode.workspace.getConfiguration('editor').rulers;
             let desiredLen = vscode.workspace.getConfiguration('completeline').desiredLength;
             let line = selection.start.line;
             let text = document.lineAt(line).text;
             let lineLength = text.length;
             lineLength += (text.split('\t').length - 1) * (editor.options.tabSize - 1);
+
+            // Add workspace.completeline.desiredLength to the array, and sort the array
+            rulerList.push(desiredLen);
+            rulerList.sort((a, b) => a - b);
+
+            // Process each defined ruler
+            for (var ruler in rulerList) {
+                // If ruler is strictly greater than line length, set the desired
+                // length to the current ruler and stop the loop
+                if (rulerList[ruler] > lineLength) {
+                    desiredLen = rulerList[ruler];
+                    break;
+                }
+                // Otherwise desired length is defined with the last ruler value
+                else {
+                    desiredLen = rulerList[ruler];
+                }
+            }
+
             let len = desiredLen - lineLength;
 
             // ===== return when line length is hover ==========================
