@@ -8,7 +8,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - none
 
-## [1.1.0] - 2019-05-24
+## [1.2.0] - 2019-05-24
 ### Changed
 - #2 Use editor.rulers to get all column rulers in addition to the Complete Line param
 
