@@ -36,21 +36,21 @@ exports.activate = (context) => {
             let lineLength = text.length;
             lineLength += (text.split('\t').length - 1) * (editor.options.tabSize - 1);
 
-            // If editor.rulers is not empty. If it does, it is the extension configuration
-            // parameter which will be take into account
-            if (rulerList.length > 0) {
-                // Process each defined ruler
-                for (var ruler in rulerList) {
-                    // If ruler is strictly greater than line length, set the desired
-                    // length to the current ruler and stop the loop
-                    if (rulerList[ruler] > lineLength) {
-                        desiredLen = rulerList[ruler];
-                        break;
-                    }
-                    // Otherwise desired length is defined with the last ruler value
-                    else {
-                        desiredLen = rulerList[ruler];
-                    }
+            // Add workspace.completeline.desiredLength to the array, and sort the array
+            rulerList.push(desiredLen);
+            rulerList.sort((a, b) => a - b);
+
+            // Process each defined ruler
+            for (var ruler in rulerList) {
+                // If ruler is strictly greater than line length, set the desired
+                // length to the current ruler and stop the loop
+                if (rulerList[ruler] > lineLength) {
+                    desiredLen = rulerList[ruler];
+                    break;
+                }
+                // Otherwise desired length is defined with the last ruler value
+                else {
+                    desiredLen = rulerList[ruler];
                 }
             }
 
