@@ -33,12 +33,12 @@
                 "completeline.desiredCharacter": {
                     "type": "string",
                     "default": "=",
-                    "description": "the repeted character"
+                    "description": "the repeated character"
                 },
                 "completeline.desiredLength": {
                     "type": "number",
                     "default": 80,
-                    "description": "we repete it until the line length hits this count."
+                    "description": "we repeat it until the line length hits this count."
                 }
             }
         },
