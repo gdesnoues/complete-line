@@ -53,7 +53,8 @@ For more information, see VS Code documentation: [Settings](https://code.visuals
 
 
 ```
-  // Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers.
+  // Render vertical rulers after a certain number of monospace characters.
+  // Use multiple values for multiple rulers.
   // No rulers are drawn if array is empty.
   "editor.rulers": [80, 120],
 
