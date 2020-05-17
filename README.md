@@ -4,47 +4,82 @@
 [![Version](https://badgen.net/vs-marketplace/v/gdesnoues.complete-line)](https://marketplace.visualstudio.com/items?itemName=gdesnoues.complete-line)
 [![installs](https://badgen.net/vs-marketplace/i/gdesnoues.complete-line)](https://marketplace.visualstudio.com/items?itemName=gdesnoues.complete-line)
 
-This is a Keymaps extension for [VS Code](https://code.visualstudio.com/)
+This is a Keymaps extension for [VS Code](https://code.visualstudio.com/).
 
-It's use to automatically complete a comment line with a definite character or with your selection
+It provides line padding, repeating a given string up to a given line length.
+
+The string to repeat is either the current selection, or the configured value, or the last character of the line.  
+The line length is consecutively each value of the configuration or the VS Code vertical rulers.
+
 
 ## Configuration
 
-Go to `File > Preferences > Settings > Extensions > Complete Line`
-- choose your default repeated character (leave the variable empty to repeat the last character of the line)
-- choose the final line length (to have several steps, use the `editor.rulers` also)
+Go to `File` (Windows) or `Code` (Mac) then `Preferences > Settings > Extensions > Complete Line`.
 
-## Command key
+This extension contributes the following variables to the [settings](https://code.visualstudio.com/docs/getstarted/settings):
 
-Use `Ctrl+Shift+:` to complete the end of your active line with the character define in the configuration
+```
+"completeline.padString": null, // Examples: "=" or "_/\"
+"completeline.padLengths": [], // Examples: [80] or [80, 100, 120]
+```
 
-- if you want to repeat a desired string : select it before use the command key
-- if you want to repeat the last character of the line : leave `Complete Line` empty
+**`completeline.padString`** 
+- The string to use for padding.
+- Leave this empty (or set it to `null`) to use the last character of the line.
+- Default: `null`.
+
+**`completeline.padLengths`**
+- The desired line lengths (defined as an array of integers).
+- Leave this empty (or set it to `[]`) to use the `editor.rulers` values.
+- Default: `[]`.
+
+
+## Keyboard Shortcut
+
+Use `Ctrl + Shift + :` (Windows) or `Ctrl + Shift + ,` (Mac) to pad the current line.
+
+To repeat a given string, select the character(s) anywhere on the line.
+
 
 ## Release Notes
 
-see [CHANGELOG.md](https://github.com/gdesnoues/complete-line/blob/master/CHANGELOG.md) for release notes
+See [CHANGELOG.md](CHANGELOG.md).
+
 
 ## :bulb: Tips
 
-You can see a vertical line (ruler) at the final length with adding this code in your settings.json
-- go to `File > Preferences > Settings > Text Editor > Files`
-- click on `Edit in settings.json`
-- add this lines :
-```json
-    "editor.rulers": [80,120],
-    "workbench.colorCustomizations": {
-        "editorRuler.foreground": "#333333"
-    },
-```
-- The first line is all the rulers positions (2 in mine)
-- The third line is the ruler color
+You can define vertical rulers in your `settings.json` as follows.  
+For more information, see VS Code documentation: [Settings](https://code.visualstudio.com/docs/getstarted/settings) and [Theme Color](https://code.visualstudio.com/api/references/theme-color).
 
-They will be added to an array with `Settings > Extensions > Complete Line`. So you may have several steps to complete the line
+
+```
+  // Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers. No rulers are drawn if array is empty.
+  "editor.rulers": [80, 120],
+
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#333", // Color of the editor rulers.
+  },
+```
+
+Or
+
+```
+  "editor.rulers": [
+    80,
+    { "column": 100, "color: "#444" },
+    { "column": 120, "color: "#555" },
+  ],
+```
+
 
 ## Contributors
 
-Thanks to :
+Thanks to:
 
 - [Pascal Polleunus](https://github.com/ppo)
 - [wimille](https://github.com/wimille)
+
+
+## License
+
+[MIT](LICENSE)
