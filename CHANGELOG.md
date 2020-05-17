@@ -8,6 +8,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - none
 
+## [1.3.2] - 2020-05-17
+### Fixed
+- #4 spell checking on package.json
+
 ## [1.3.1] - 2020-05-17
 ### Changed
 - #5 Complete review of README
